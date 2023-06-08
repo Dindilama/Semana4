@@ -1,107 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+*{
+  box-sizing: border-box;
+  margin:0;
+  font-family: Arial;
+}
+
+body{
+  height: 100vh;
+}
+
+.arriba1{
+  background-color: #D1891C;
+  font-size: 80%;
+  padding: 8px;
+}
+.arriba2{
+  background-color: #00669F;
+  color: white;
+  font-size: 80%;
+  padding: 10px;
+  
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.caja{
+  display: inline-block;
+  position: relative;
+  margin: 30px;
+  background-color: #e2e8eb;
+  width: 250px;
+  height: 420px;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.corazon{
+  position: absolute;
+  width: 10%;
+  top: 10px;
+  left: 10px;
+}
+
+.zonaImagen{
+  border-radius: 20%;
+  height: 100px
+}
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.miniatura{
+  position: relative;
+  border-radius: 100%;
+  width: 100px;
+
+}
+.zonaTexto{
+
+  font-size: 10px;
+  padding: 0px 20px 20px 20px;
+}
+h3{
+  font-size: 150%;
+  padding: 5%;
+}
+
+.boton{
+  display: inline-block;
+  color: white;
+  padding: 15px;
+  width: 50%;
+  background-color: #00669F;
+}
+
+footer{
+  color: white;
+  background-color: #00669F;
+  text-align: center;
+  height: 51px;
+  padding: 10px;
+}
+
+@media (min-width: 480px) {
+  main{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
   }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /*Header styles*/
-  
-  .discounts {
-    background: #1CD1B0;
-    padding: 10px 28px;
-  }
-  
-  .heroes {
-    background: #00669F;
-    padding: 26px 28px;
-    box-shadow: 0px 10px 7px rgba(0, 0, 0, 0.25);
-  }
-  
-  h1 {
-    font-size: 40px;
-    
-  }
-  
-  /* Main styles */
-  
-  main {
-    margin: 135px auto;
-  }
-  
-  .heroes-container {
-    text-align: center;
-  }
-  
-  .heroes-card {
-    width: 300px;
-    background: #F3F3F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: inline-block;
-    margin: 0px 15px;
-  }
-  
-  .card-banner {
-    width: 100%;
-    height: 193px;
-    background-image: url(/img/fondodebatman.png);
-    position: relative;
-    text-align: left;
-    padding: 15px;
-  }
-  
-  .card-banner i {
-    font-size: 25px;
-  }
-  
-  .harley-quinn {
-    background-image: url(/img/fondoloca.png);
-  }
-  
-  .card-banner img {
-    position: absolute;
-    border-radius: 100%;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(50%);
-  }
-  
-  .card-text {
-    padding: 17px;
-    padding-top: 74px;
-    text-align: center;
-  }
-  
-  .card-text h2 {
-    text-align: center;
-    font-size: 30px;
-    font-weight: 400;
-    margin-bottom: 5px;
-  }
-  
-  .card-text p {
-    text-align: left;
-  }
-  
-  .card-text button {
-    background: #00669F;
-    color: #fff;
-    border: none;
-    padding: 15px 38px;
-    margin-top: 30px;
-  }
-  
-  /* Footer styles */
-  
-  footer {
-    background: #00669F;
-    padding: 16px;
-    color: #fff
-  }
+}
