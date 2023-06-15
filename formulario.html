@@ -2,115 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style/style_añadir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6e71113311.js" crossorigin="anonymous"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clase 16</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-      </style>
-    <link rel="stylesheet" type="text/css" href="/style/style_añadir.css">
+
+    <title>Heroes</title>
 </head>
 <body>
     <header>
-        <article class="header1">
-            <p class="titulo1">20% de descuento en todos los productos!</p>
-        </article>
-        <article class="header2">
-            <img class="tienda" src="img/Logo.png">
-            <p class="titulo2">Nombre Tienda</p>
-        </article>
-        <article class="header3">
-            <nav>
-                <ul class="categorias" type="none">
-                    <li class="titulo3">Contacto</li>
-                    <li class="titulo3">Registrarme</li>
-                    <li class="titulo3">Ingresar</li>
-                </ul>    
-            </nav>
-        </article>
+        <section class="cyan-label">
+            <p>Descuentos 20%</p>
+        </section>
+        <section class="blue-label">
+            <h1>Heroes</h1>
+        </section>
     </header>
-    <main>
-        <form class="formularioC" action="proceso.php" method="post">
-            <legend Class="titulo">Añadí tu super!</legend>
-            <legend Class="subtitulo">Agrega tu personaje favorito completando las opciones.</legend>
-            <section class="formularioInterno">
-                <article class="columnLeft">
-                    <div class="entrada">
-                        <label for="nombre">*Nombre</label>
-                        <input class="entradaFechaEspecie" type="text" id="nombre" name="nombre" required>
+    
+    <section class="main-container">
+        <h2>Añadí tu super!</h2>
+        <p>Agrega a tu personaje favorito completando las opciones</p>
+        <form action="">
+            <article>
+                <div class="input-form">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" class="input-item">
+                </div>
+                <div class="input-form">
+                    <label for="cars">Especie</label>
+                    <select name="especies" class="input-item">
+                        <option value="mutante">Mutante</option>
+                        <option value="superSoldado">Super soldado</option>
+                        <option value="alien">Alien</option>
+                        <option value="kryptoniano">Kryptoniano</option>
+                        <option value="hechicero">Hechicero</option>
+                        <option value="humano">Humano</option>
+                    </select>
+                </div>
+            </article>
+            <article>
+                <div class="input-form">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" class="input-item">
+                </div>
+                <div class="input-form">
+                    <label for="foto">Agregar Foto</label>
+                    <input type="file">
+                </div>
+            </article>
+
+            <article>
+                <div class="input-form">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Descripción" disabled></textarea>
+                </div>
+                <div class="selections">
+                    <p>Poderes</p>
+                    <div>
+                        <input type="checkbox" name="volar">
+                        <label for="volar">Volar</label>
                     </div>
-                    <div class="fecha">
-                        <label for="fecha">Fecha</label>
-                        <input class="entradaFechaEspecie" type="date" id="fecha" name="fecha">
+                    <div>
+                        <input type="checkbox" name="smart">
+                        <label for="smart">Superinteligencia</label>
                     </div>
-                    <div class="descripcion">
-                        <label for="descripcion"></label>
-                        <input class="entradaFechaEspecie descripcion"type="text" id="descripcion" name="descripcion" placeholder="Descripción">
+                    <div>
+                        <input type="checkbox" name="laser">
+                        <label for="laser">Vista de rayo laser</label>
                     </div>
-                </article>
-                <article class="columnRight">
-                    <div class="especie">
-                        <label class="especie">*Especie</label>
-                        <select class="entradaFechaEspecie" name="especie" id="especie" required>
-                            <option value="NA">Especie</option>
-                            <option value="SSP">Sin poderes</option>
-                            <option value="CPN">Con poderes de nacimiento</option>
-                            <option value="SPA">Super poderes adquiridos</option>
-                            <option value="OSP">Objetos que les proporcionan poderes</option>
-                        </select>
+                    <div>
+                        <input type="checkbox" name="cheto">
+                        <label for="cheto">Billetera gorda</label>
                     </div>
-                    <div class="carga">
-                        <label for="carga">Agregar Foto</label>
-                        <input type="file" id="carga" name="carga">  
+                    
+                    <br>
+
+                    <p>Tipo de personaje</p>
+                    <div>
+                        <input type="radio" name="tipo" id="bueno">
+                        <label for="tipo">Héroe / Heroina</label>
                     </div>
-                    <div class="poderes">
-                        <p>Poderes</p>
-                        <div>
-                            <input type="checkbox" name="poderes" id="poderes">
-                            <label class="poderes">Volar</label>
-                        </div>
-                        
-                        <div>
-                            <input type="checkbox" name="poderes" id="poderes">
-                            <label class="poderes">Superinteligencia</label>
-                        </div>
-                        
-                        <div>
-                            <input type="checkbox" name="poderes" id="poderes">
-                            <label class="poderes">Vista de rayo láser</label>
-                        </div>
-                        
-                        <div>
-                            <input type="checkbox" name="poderes" id="poderes">
-                        <label class="poderes">Billetera gorda</label>
-                        </div>
-                        
-                    </div>
-                    <hr>
-                    </div>
-                    <div class="tipoPersonaje">
-                        <p>Tipo de personaje</p>
-                        <div>
-                            <input type="radio" name="tipoPersonaje" id="tipoPersonaje">
-                            <label class="tipoPersonaje">Héroe / Heroina</label>
-                        </div>
-                        
-                        <div>
-                            <input type="radio" name="tipoPersonaje" id="tipoPersonaje">
-                            <label class="tipoPersonaje">Villano / Villana</label>
-                        </div>  
-                    </div>
-                </article>
-            </section>
-            <div class="botonAñadir">
-                <label class="Añadir"></label>
-                <button type="submit" name="añadir" id="añadir">Añadir</button>
-        
-            </div>
+                    <div>
+                        <input type="radio" name="tipo" id="malo">
+                        <label for="tipo">Villano / Villana</label>
+                    </div>  
+                </div>
+            </article>
+            <article>
+                <button>Añadir</button>
+            </article>
+            
+
         </form>
-    </main>
-    <footer>
-        <div class="pieDePagina"><p class="textofooter">Todos los derechos reservados a FRONT END 1</p> </div>
-    </footer>
+    </section>
 </body>
 </html>
